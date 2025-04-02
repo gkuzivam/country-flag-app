@@ -5,14 +5,20 @@
         <p>Back</p>
     </button>
 
-    <div class="flags-info">
-        <ng-container *ngIf="country$ | async as country">
-            <h2>{{ country.name }}</h2>
-            <img [src]="country.flag" [alt]="country.name + ' flag'">
-            <p>Population: {{ country.population }}</p>
-            <p>Region: {{ country.region }}</p>
-            <p>Capital: {{ country.capital }}</p>
-        </ng-container>
+    <div class="flags-info" *ngIf="country$ | async as country" >
+        <div class="flag">
+            <img [src]="country.flags.svg" [alt]="country.name.common + ' flag'">
+            <div class="info">
+                <p class="name">{{country.name.common}}</p>
+                <p>Native name: {{country.name.official}}</p>
+                <p>Population: {{country.population | number}}</p>
+                <p>Region: {{country.region}}</p>
+                <p>Sub Region: {{country.subregion || 'Unknown'}}</p>
+                <p>Capital: {{country.capital}}</p>
+            </div>
+        </div>
+
+       
     </div>
 
 </div>

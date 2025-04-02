@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { Country } from '../country';
 
 @Injectable({
@@ -18,10 +18,9 @@ export class FlagService {
   }
 
   getCountryByCca2(cca2: string): Observable<Country> {
-    return this.http.get<Country>(`${this.cc2aUrl}/${cca2}`).pipe(
-      tap((data) => {
-        console.log(data);
-      })
+    return this.http.get<Country[]>(`${this.cc2aUrl}/${cca2}`).pipe(
+      map(countries => countries[0]),
+      tap((result) => console.log(result)),
     );
   }
 }

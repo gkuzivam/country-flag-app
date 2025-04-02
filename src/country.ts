@@ -15,6 +15,7 @@ export interface Country {
   cca3: string;
   independent: boolean;
   status: string;
+  subregion: string;
   unMember: boolean;
   currencies: {
     [key: string]: {
