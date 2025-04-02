@@ -1,0 +1,37 @@
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+h1 {
+    font-size: 24px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.mode {
+    width: 108px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mode:hover {
+    cursor: pointer;
+}
+
+.mode img {
+    width: 15px;
+    height: 14px;
+    margin-top: 17px;
+}
+
+.mode p {
+    font-size: 16px;
+    padding-left: 1px;
+}

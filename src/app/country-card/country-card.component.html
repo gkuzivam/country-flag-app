@@ -1,1 +1,9 @@
-<p>country-card works!</p>
+<div class="country-container" [routerLink]="['/', ROUTER_TOKENS.DETAILS, country.cca2]">
+    <div class="flag">
+        <img [src]="country.flags.svg" alt="Country Flag">
+    </div>
+    <p class="name">{{country.name.official}}</p>
+    <p class="details">Population: {{country.population | number}}</p>
+    <p class="details">Region: {{country.region}}</p>
+    <p class="details">Capital: {{country.capital}}</p>
+</div>

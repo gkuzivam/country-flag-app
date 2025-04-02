@@ -1,0 +1,32 @@
+.country-container {
+    width: 264px;
+    height: 336px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.flag {
+    width: 100%;
+    height: 160px;
+}
+
+.flag img {
+    width: 264px;
+    height: 160px;
+    object-fit: fill;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.details {
+    margin: 3px 0 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+}

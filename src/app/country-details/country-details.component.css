@@ -1,0 +1,28 @@
+.details {
+    background-color: white;
+    padding: 80px;
+}
+
+.back {
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 52%);
+    width: 136px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back img {
+    width: 20px;
+    height: 20px;
+    padding: 0px 10px 0px 20px;
+}
+
+.back p {
+    font-size: 16px;
+}
+
+.flag-info {
+    display: flex;
+}

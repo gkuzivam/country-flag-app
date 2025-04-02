@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="details">
+    <button class="back" [routerLink]="['/', ROUTER_TOKENS.HOME]">
+        <img src="backward-solid.svg" alt="Back Image">
+        <p>Back</p>
+    </button>
+
+    <div class="flags-info">
+        <ng-container *ngIf="country$ | async as country">
+            <h2>{{ country.name }}</h2>
+            <img [src]="country.flag" [alt]="country.name + ' flag'">
+            <p>Population: {{ country.population }}</p>
+            <p>Region: {{ country.region }}</p>
+            <p>Capital: {{ country.capital }}</p>
+        </ng-container>
+    </div>
+
+</div>

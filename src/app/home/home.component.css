@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.results {
+    background-color: hsl(0, 0%, 98%);
+}
+
+.search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.search input {
+    width: 480px;
+    height: 56px;
+    padding-left: 45px;
+    font-size: 14px;
+    border: 1px solid white;
+    color: hsl(0, 0%, 52%);
+}
+
+.search input::placeholder {
+    color: hsl(0, 0%, 52%);
+}
+
+.search img {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 15px;
+    pointer-events: none;
+    /* Prevent the icon from blocking input clicks */
+    padding-top: 20px;
+}
+
+.filter {
+    font-size: 14px;
+}
+
+.filter:hover {
+    cursor: pointer;
+}
+
+.filter-select {
+    background-color: white;
+    /* White background for the select box */
+    font-size: 1.2rem;
+    /* Increase font size */
+    padding: 0.5rem;
+    /* Add padding for better spacing */
+    border: 1px solid #ccc;
+    /* Optional: Add a border */
+    border-radius: 4px;
+    /* Optional: Rounded corners */
+    color: hsl(0, 0%, 52%);
+    cursor: pointer;
+}
+
+.filter-select option {
+    background-color: white;
+    /* White background for options */
+    color: #333;
+    /* Text color for options */
+    font-size: 1.2rem;
+    /* Match font size with select */
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+}
