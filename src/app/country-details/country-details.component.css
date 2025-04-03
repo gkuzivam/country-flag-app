@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    box-shadow: 4px 4px 10px hsl(0, 0%, 52%);
 }
 
 .back img {
@@ -37,8 +38,34 @@
 .info {
     margin-left: 100px;
 }
+
 .name {
     font-size: 32px;
     margin-bottom: 20px;
     font-weight: 800;
+}
+
+.domain-info {
+    margin: 79px 0px 0px 180px;
+}
+
+.border-info {
+    margin-top: 100px;
+}
+
+.border-country {
+    width: 98px;
+    height: 28px;
+    border: 1px solid hsl(0, 0%, 52%);
+    box-shadow: 4px 4px 10px hsl(0, 0%, 52%);
+    margin-right: 10px;
+}
+
+.border-country span {
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.border-countries {
+    display: flex;
 }

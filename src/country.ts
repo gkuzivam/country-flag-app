@@ -16,6 +16,7 @@ export interface Country {
   independent: boolean;
   status: string;
   subregion: string;
+  borders: string[];
   unMember: boolean;
   currencies: {
     [key: string]: {
