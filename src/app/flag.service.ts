@@ -17,9 +17,14 @@ export class FlagService {
       .pipe(tap(() => console.log('In  http.get pipeline')));
   }
 
-  getCountryByCca2(cca2: string): Observable<Country> {
+  getCountryByCca2(cca2: string): Observable<Country | null> {
     return this.http.get<Country[]>(`${this.cc2aUrl}/${cca2}`).pipe(
-      map(countries => countries[0]),
+      map(countries => {
+        if (!countries || countries.length === 0) {
+          return null;
+        } 
+        return countries[0];
+      }),
       tap((result) => console.log(result)),
     );
   }
