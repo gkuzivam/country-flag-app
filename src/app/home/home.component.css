@@ -3,9 +3,6 @@
     flex-direction: column;
 }
 
-
-
-
 .results {
     background-color: hsl(0, 0%, 98%);
 }
@@ -51,8 +48,10 @@
 
 .filter-select {
     background-color: white;
+    width: 200px;
+    height: 56px;
     /* White background for the select box */
-    font-size: 1.2rem;
+    font-size: 14px;
     /* Increase font size */
     padding: 0.5rem;
     /* Add padding for better spacing */
@@ -62,6 +61,7 @@
     /* Optional: Rounded corners */
     color: hsl(0, 0%, 52%);
     cursor: pointer;
+    text-align: center;
 }
 
 .filter-select option {
@@ -69,7 +69,7 @@
     /* White background for options */
     color: #333;
     /* Text color for options */
-    font-size: 1.2rem;
+    font-size: 14px;
     /* Match font size with select */
 }
 
