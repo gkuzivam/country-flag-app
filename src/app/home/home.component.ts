@@ -1,4 +1,10 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnDestroy,
+  OnInit,
+  ChangeDetectorRef,
+} from '@angular/core';
 import { Country } from '../../country';
 import { FlagService } from '../flag.service';
 import { Subscription, tap } from 'rxjs';
@@ -20,6 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   sub!: Subscription;
   searchQuery: string = '';
   selectedRegion: string = '';
+  changeDetector: ChangeDetectorRef = inject(ChangeDetectorRef);
 
   ngOnInit(): void {
     this.sub = this.flagService
@@ -29,6 +36,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.countryList = countries;
         this.filteredCountryList = countries;
         console.log(this.countryList);
+        this.changeDetector.detectChanges();
       });
   }
 

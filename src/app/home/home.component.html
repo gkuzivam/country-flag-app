@@ -21,7 +21,10 @@
     </div>
 
     <div class="countries">
-      <app-country-card *ngFor="let country of filteredCountryList" [country]="country"></app-country-card>
+      @for (country of filteredCountryList; track country.cca2) {
+        <app-country-card [country]="country"></app-country-card>
+      }
+
     </div>
 
 
