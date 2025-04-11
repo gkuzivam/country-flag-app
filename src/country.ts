@@ -2,12 +2,10 @@ export interface Country {
   name: {
     common: string;
     official: string;
-    nativeName: {
-      [key: string]: {
+    nativeName: Record<string, {
         official: string;
         common: string;
-      };
-    };
+      }>;
   };
   tld: string[];
   cca2: string;
@@ -18,12 +16,10 @@ export interface Country {
   subregion: string;
   borders: string[];
   unMember: boolean;
-  currencies: {
-    [key: string]: {
+  currencies: Record<string, {
       name: string;
       symbol: string;
-    };
-  };
+    }>;
   idd: {
     root: string;
     suffixes: string[];
@@ -31,24 +27,18 @@ export interface Country {
   capital: string[];
   altSpellings: string[];
   region: string;
-  languages: {
-    [key: string]: string;
-  };
-  translations: {
-    [key: string]: {
+  languages: Record<string, string>;
+  translations: Record<string, {
       official: string;
       common: string;
-    };
-  };
+    }>;
   latlng: number[];
   landlocked: boolean;
   area: number;
-  demonyms: {
-    [key: string]: {
+  demonyms: Record<string, {
       f: string;
       m: string;
-    };
-  };
+    }>;
   flag: string;
   maps: {
     googleMaps: string;
