@@ -16,13 +16,13 @@ import { Country } from '../../country';
 export class CountryDetailsComponent implements OnInit {
   readonly ROUTER_TOKENS = ROUTER_TOKENS;
   country$!: Observable<Country | null>;
-  languages$!: Observable<string | null >;
-  currencies$!: Observable<string | null >;
+  languages$!: Observable<string | null>;
+  currencies$!: Observable<string | null>;
 
   constructor(
     private flagService: FlagService,
-    private route: ActivatedRoute, 
-    private router: Router,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class CountryDetailsComponent implements OnInit {
           this.router.navigate(['/notfound']);
           return of(null);
         })
-      )
+      );
       this.languages$ = this.country$.pipe(
         map((country) => {
           if (country) {
@@ -45,13 +45,12 @@ export class CountryDetailsComponent implements OnInit {
 
       this.currencies$ = this.country$.pipe(
         map((country) => {
-          if (country) {
+          if (country) {
             return Object.values(country.currencies)
-            .map((currency) => currency.name)
-            .join(', ');
+              .map((currency) => currency.name)
+              .join(', ');
           }
           return null; // Return null if no country
-          
         })
       );
     }

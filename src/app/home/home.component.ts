@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   filteredCountryList: Country[] = [];
   flagService: FlagService = inject(FlagService);
   sub!: Subscription;
-  searchQuery: string = '';
-  selectedRegion: string = '';
+  searchQuery = '';
+  selectedRegion = '';
   changeDetector: ChangeDetectorRef = inject(ChangeDetectorRef);
 
   ngOnInit(): void {

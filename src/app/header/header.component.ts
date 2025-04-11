@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ROUTER_TOKENS } from '../app.routes';
 
@@ -12,7 +12,7 @@ export class HeaderComponent {
   readonly ROUTER_TOKENS = ROUTER_TOKENS;
   isDarkMode = false;
 
-  toggleDarkMode() : void {
+  toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
