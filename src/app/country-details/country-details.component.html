@@ -1,20 +1,20 @@
 <app-header></app-header>
 <div class="details">
-    <button class="back" [routerLink]="['/', ROUTER_TOKENS.HOME]">
+    <button class="back" [routerLink]="['/', ROUTER_TOKENS.HOME]" aria-label="Go back to the home page">
         <img src="backward-solid.svg" alt="Back Image">
         <p>Back</p>
     </button>
 
     <div class="flags-info" *ngIf="country$ | async as country">
         <div class="flag">
-            <img [src]="country.flags.svg" [alt]="country.name.common + ' flag'">
+            <img [src]="country.flags.svg" [alt]="country.name.common + ' flag'" [attr.aria-label]="'Flag of ' + country.name.common">
             <div class="info">
-                <p class="name">{{country.name.common}}</p>
+                <p class="name" [attr.aria-label]="'Country name: ' + country.name.common">{{country.name.common}}</p>
                 <p><strong>Native name:</strong> {{country.name.official}}</p>
-                <p><strong>Population:</strong> {{country.population | number}}</p>
-                <p><strong>Region:</strong> {{country.region}}</p>
-                <p><strong>Sub Region:</strong> {{country.subregion || 'Unknown'}}</p>
-                <p><strong>Capital:</strong> {{country.capital}}</p>
+                <p [attr.aria-label]="'Population: ' + (country.population | number)"><strong>Population:</strong> {{country.population | number}}</p>
+                <p [attr.aria-label]="'Region: ' + country.region"><strong>Region:</strong> {{country.region}}</p>
+                <p [attr.aria-label]="'Sub Region: ' + (country.subregion || 'Unknown')"><strong>Sub Region:</strong> {{country.subregion || 'Unknown'}}</p>
+                <p [attr.aria-label]="'Capital: ' + country.capital"><strong>Capital:</strong> {{country.capital}}</p>
                 <div class="border-info">
                     <p><strong>Border Countries:</strong></p>
                     <div class="border-countries">
@@ -26,7 +26,7 @@
             </div>
 
             <div class="domain-info">
-                <p><strong>Top Level Domain:</strong> {{country.tld}}</p>
+                <p [attr.aria-label]="'Top Level Domain: ' + country.tld"><strong>Top Level Domain:</strong> {{country.tld}}</p>
                 <div *ngIf="currencies$ | async as currencies" class="currencies">
                     <p><strong>Currencies:</strong> {{currencies}}</p>
                 </div>

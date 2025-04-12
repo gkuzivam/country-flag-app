@@ -5,11 +5,14 @@
 
     <div class="search-filter-container">
       <div class="search">
-        <img src="magnifying-glass-solid.svg" alt="search image">
-        <input type="text" placeholder="Search for a country..." [(ngModel)]="searchQuery" (input)="onSearch()">
+        <img src="magnifying-glass-solid.svg" alt="Magnifying glass icon for search">
+        <input type="text" placeholder="Search for a country..." [(ngModel)]="searchQuery" (input)="onSearch()"
+          aria-label="Search for a country">
       </div>
       <div class="filter">
-        <select class="filter-select" [(ngModel)]="selectedRegion" (change)="onRegionFilterChange()">
+        <select class="filter-select" [(ngModel)]="selectedRegion" (change)="onRegionFilterChange()"
+          aria-label="Filter countries by region" aria-expanded="false">
+
           <option value="">Filter by Region</option>
           <option value="Africa">Africa</option>
           <option value="Americas">Americas</option>
@@ -22,7 +25,7 @@
 
     <div class="countries">
       @for (country of filteredCountryList; track country.cca2) {
-        <app-country-card [country]="country"></app-country-card>
+      <app-country-card [country]="country"></app-country-card>
       }
 
     </div>
