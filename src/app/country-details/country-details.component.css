@@ -5,13 +5,13 @@
 
 .back {
     background-color: white;
-    border: 1px solid hsl(0, 0%, 52%);
+    border: 1px solid var(--dark-gray);
     width: 136px;
     height: 40px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    box-shadow: 4px 4px 10px hsl(0, 0%, 52%);
+    box-shadow: 4px 4px 10px var(--dark-gray);
 }
 
 .back img {
@@ -56,8 +56,8 @@
 .border-country {
     width: 98px;
     height: 28px;
-    border: 1px solid hsl(0, 0%, 52%);
-    box-shadow: 4px 4px 10px hsl(0, 0%, 52%);
+    border: 1px solid var(--dark-gray);
+    box-shadow: 4px 4px 10px var(--dark-gray);
     margin-right: 10px;
     margin-bottom: 10px;
 }

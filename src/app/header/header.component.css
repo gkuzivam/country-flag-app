@@ -3,7 +3,7 @@
     height: 80px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid hsl(0, 0%, 86%);
+    border-bottom: 1px solid var(--header-border);
 }
 
 h1 {

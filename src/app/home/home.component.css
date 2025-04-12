@@ -4,7 +4,7 @@
 }
 
 .results {
-    background-color: hsl(0, 0%, 98%);
+    background-color: var(--background-light-gray);
 }
 
 .search-filter-container {
@@ -21,11 +21,11 @@
     padding-left: 45px;
     font-size: 14px;
     border: 1px solid white;
-    color: hsl(0, 0%, 52%);
+    color: var(--dark-gray);
 }
 
 .search input::placeholder {
-    color: hsl(0, 0%, 52%);
+    color: var(--dark-gray);
 }
 
 .search img {
@@ -59,7 +59,7 @@
     /* Optional: Add a border */
     border-radius: 4px;
     /* Optional: Rounded corners */
-    color: hsl(0, 0%, 52%);
+    color: var(--dark-gray);
     cursor: pointer;
     text-align: center;
 }
