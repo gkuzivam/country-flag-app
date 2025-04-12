@@ -7,7 +7,13 @@
   --dark-gray: hsl(0, 0%, 52%);
   --background-dark-blue: hsl(207, 26%, 17%);
   --background-dark-mode: hsl(209, 23%, 22%);
-  --header-border: hsl(0, 0%, 86%)
+  --header-border: hsl(0, 0%, 86%);
+  /* font sizes */
+  --very-small: 14px;
+  --small: 16px;
+  --medium: 18px;
+  --large: 24px;
+  --very-large: 32px;
 }
 
 body {

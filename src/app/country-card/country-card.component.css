@@ -20,13 +20,13 @@
 }
 
 .name {
-    font-size: 18px;
+    font-size: var(--medium);
     font-weight: 600;
     margin-left: 10px;
 }
 
 .info {
     margin: 3px 0 0 10px;
-    font-size: 14px;
+    font-size: var(--very-small);
     font-weight: 300;
 }

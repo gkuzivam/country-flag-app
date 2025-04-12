@@ -21,7 +21,7 @@
 }
 
 .back p {
-    font-size: 16px;
+    font-size: var(--small);
 }
 
 
@@ -40,7 +40,7 @@
 }
 
 .name {
-    font-size: 32px;
+    font-size: var(--very-large);
     margin-bottom: 20px;
     font-weight: 800;
 }
@@ -63,7 +63,7 @@
 }
 
 .border-country span {
-    font-size: 18px;
+    font-size: var(--medium);
     margin-left: 30px;
 }
 

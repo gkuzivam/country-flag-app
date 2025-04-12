@@ -19,7 +19,7 @@
     width: 480px;
     height: 56px;
     padding-left: 45px;
-    font-size: 14px;
+    font-size: var(--very-small);
     border: 1px solid white;
     color: var(--dark-gray);
 }
@@ -39,7 +39,7 @@
 }
 
 .filter {
-    font-size: 14px;
+    font-size: var(--very-small);
 }
 
 .filter:hover {
@@ -51,7 +51,7 @@
     width: 200px;
     height: 56px;
     /* White background for the select box */
-    font-size: 14px;
+    font-size: var(--very-small);
     /* Increase font size */
     padding: 0.5rem;
     /* Add padding for better spacing */
@@ -69,7 +69,7 @@
     /* White background for options */
     color: #333;
     /* Text color for options */
-    font-size: 14px;
+    font-size: var(--very-small);
     /* Match font size with select */
 }
 
