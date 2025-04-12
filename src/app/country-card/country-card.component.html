@@ -1,7 +1,7 @@
 <div class="country-container" [routerLink]="['/', ROUTER_TOKENS.DETAILS, country.cca2]"
     (keydown.enter)="navigateToDetails()" tabindex="0">
     <div class="flag">
-        <img [src]="country.flags.svg" alt="Country Flag">
+        <img [src]="country.flags.svg" alt="Country Flag For {{country.name.official}}">
     </div>
     <p class="name">{{country.name.official}}</p>
     <p class="info">Population: {{country.population | number}}</p>
