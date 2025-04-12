@@ -17,13 +17,16 @@ export const routes: Routes = [
   {
     path: ROUTER_TOKENS.HOME,
     component: HomeComponent,
+    title: 'Country Flag App - Home',
   },
   {
     path: `${ROUTER_TOKENS.DETAILS}/:cca2`,
     component: CountryDetailsComponent,
+    title: 'Country Flag App - Details',
   },
   {
     path: '**',
     component: NotfoundComponent,
+    title: 'Country Flag App - Not Found',
   },
 ];
