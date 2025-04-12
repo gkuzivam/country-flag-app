@@ -21,11 +21,11 @@
     padding-left: 45px;
     font-size: var(--very-small);
     border: 1px solid white;
-    color: var(--dark-gray);
+    color: black;
 }
 
 .search input::placeholder {
-    color: var(--dark-gray);
+    color: black;
 }
 
 .search img {
@@ -59,7 +59,7 @@
     /* Optional: Add a border */
     border-radius: 4px;
     /* Optional: Rounded corners */
-    color: var(--dark-gray);
+    color: black;
     cursor: pointer;
     text-align: center;
 }
