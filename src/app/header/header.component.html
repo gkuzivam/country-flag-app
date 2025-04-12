@@ -1,6 +1,7 @@
-<header class="header">
-    <h1 [routerLink]="['/', ROUTER_TOKENS.HOME]">Where in the world?</h1>
-    <button class="mode" (click)="toggleDarkMode()">
+<header class="header" aria-label="Country Flag Application Header">
+    <h1 [routerLink]="['/', ROUTER_TOKENS.HOME]" aria-label="Navigate to Home">Where in the world?</h1>
+    <button class="mode" (click)="toggleDarkMode()"
+        [attr.aria-label]="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
         <img src="moon-solid.svg" alt="Light or Dark Mode Image">
         <p>{{ isDarkMode ? 'Light Mode' : 'Dark Mode'}}</p>
     </button>
